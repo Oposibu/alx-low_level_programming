@@ -7,14 +7,12 @@
  * Return: 0
  */
 int main(void)
+
 {
-int i;
-for (i = 0; i < 10; i++)
-{
-for (i = 0; i < 10; i++)
-{
-	printf("%i", i);
-}
-printf("\n");
-return (0);
+	int a = 0;
+
+	for (; a < 10 ; a++)
+		printf("%d", a);
+	putchar('\n');
+	return (0);
 }
