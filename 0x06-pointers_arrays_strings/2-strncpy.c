@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * _strncpy - copies a string
  * terminating null byte, using at most an inputted number of bytes.
