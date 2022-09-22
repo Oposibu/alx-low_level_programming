@@ -5,15 +5,27 @@
  *Return: the pointer to dest.
  */
 
-char *string_toupper(char *s)
+char *cap_string(char *s)
 {
-	int count = 0;
+	int i = 0, j;
+	char a[] = " \t\n,;.!?\"(){}";
 
-	while (*(s + count) != '\0')
+	while (*(s + i))
 	{
-		if ((*(s + count) >= 97) && (*(s + count) <= 122))
-			*(s + count) = *(s + count) - 32;
-		count++;
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
+		{
+			if (i == 0)
+				*(s + i) -= 'a' - 'A';
+			else
+			{
+				for (j = 0; j <= 12; j++)
+				{
+					if (a[j] == *(s + i - 1))
+						*(s + i) -= 'a' - 'A';
+				}
+			}
+		}
+		i++;
 	}
 
 	return (s);
