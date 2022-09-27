@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
  * _memset - sets memory to array
@@ -10,13 +9,13 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	 int i = 0;
+	 unsigned int i;
 
-	for (; n > 0; i++)
-	{
-		s[i] = b;
-		n--;
-	}
-	return (s);
+	 /*Declaring FOR*/
+	 for (i = 0; i < n; i++)
+	 {
+		 *(s + i) = b; /*add 1 position s*/
+	 } /*END FOR*/
 
+	 return (s);
 }
